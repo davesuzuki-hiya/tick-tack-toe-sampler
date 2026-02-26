@@ -38,7 +38,7 @@
     min-height: 100vh;
     display:flex; flex-direction:column;
     align-items:center; justify-content:center;
-    overflow:hidden; user-select:none;
+    overflow-x:hidden; overflow-y:auto; user-select:none;
     transition: background 0.5s ease, color 0.5s ease;
   }
 
@@ -293,10 +293,12 @@
   }
 
   @media(max-width:460px) {
-    .device { width:calc(100vw - 20px); padding:18px; border-radius:12px; }
+    body { justify-content:flex-start; padding:12px 0 24px; }
+    .device { width:calc(100vw - 20px); padding:18px 18px 22px; border-radius:12px; }
     .inst-name { font-size:8px; }
     .model-id { font-size:20px; }
     .style-btn { font-size:7px; padding:6px 2px; }
+    .knob-row { gap:16px; }
   }
 </style>
 </head>
